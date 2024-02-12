@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Out</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+    }
+    #question {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #response {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <h1>Ask Out</h1>
+    <div id="question">Will you be my Valentine?</div>
+    <div id="response"></div>
+    <button id="yesButton" onclick="proceed()">Yes</button>
+    <button id="noButton" onclick="displayNoResponse()">No</button>
+
+    <script>
+        function displayNoResponse() {
+            var noResponses = [
+                "But I'm your boyfriend!?",
+                "But you're my girlfriend?!",
+                "I'll fuck you if you don't say yes",
+                "I'll fuck you good if you say Yes",
+		"But you wanted me to ask you :(",
+		"Yk I miss you sm",
+		"Just say you dont loveme:(",
+		"I dont wanna join bajrang dal, baby pleasuuuuu",
+                "Okay but that's not an answer so redo :)"
+            ];
+            document.getElementById("response").textContent = noResponses[Math.floor(Math.random() * noResponses.length)];
+        }
+
+        function proceed() {
+            alert("Awww, I love you too");
+            // Here you can add additional code to proceed if necessary
+        }
+    </script>
+</body>
+</html>
